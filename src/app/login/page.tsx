@@ -6,7 +6,7 @@ import { AlertCircle, CheckCircle } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useEffect, useState } from 'react';
 
-import { checkForUpdates, CURRENT_VERSION, UpdateStatus } from '@/lib/version';
+import { checkForUpdates, UpdateStatus } from '@/lib/version';
 
 import { useSite } from '@/components/SiteProvider';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -33,12 +33,10 @@ function VersionDisplay() {
 
   return (
     <button
-      onClick={() =>
-        window.open('https://github.com/senshinya/MoonTV', '_blank')
-      }
-      className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 transition-colors cursor-pointer'
+      onClick={() => window.open('https://www.haoqiyi.com', '_blank')}
+      className='absolute bottom-5 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 transition-colors cursor-pointer'
     >
-      <span className='font-mono'>v{CURRENT_VERSION}</span>
+      <span className='font-mono'>Www.HaoQiYi.Com</span>
       {!isChecking && updateStatus !== UpdateStatus.FETCH_FAILED && (
         <div
           className={`flex items-center gap-1.5 ${
@@ -232,6 +230,10 @@ function LoginPageClient() {
 
       {/* 版本信息显示 */}
       <VersionDisplay />
+
+      <div className='absolute bottom-1 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 transition-colors cursor-pointer'>
+        <span className='font-mono'>Mail:3888831@gmai.com</span>
+      </div>
     </div>
   );
 }
